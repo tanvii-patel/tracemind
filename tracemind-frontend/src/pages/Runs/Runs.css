@@ -1,0 +1,80 @@
+.runs-page {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 30px 32px 40px;
+
+    background: #08111F;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.runs-page .page-header {
+    margin-bottom: 28px;
+}
+
+
+.runs-page .page-header h1 {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+.runs-page .page-header p {
+    margin-top: 8px;
+
+    color: #94A3B8;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991.98px) {
+
+    .runs-page {
+        padding: 24px 20px 35px;
+    }
+
+    .runs-page .page-header h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .runs-page {
+        padding: 18px 14px 30px;
+    }
+
+    .runs-page .page-header {
+        margin-bottom: 22px;
+    }
+
+    .runs-page .page-header h1 {
+        font-size: 26px;
+    }
+
+    .runs-page .page-header p {
+        font-size: 13px;
+    }
+
+}

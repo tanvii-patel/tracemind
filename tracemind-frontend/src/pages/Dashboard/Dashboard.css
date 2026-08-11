@@ -1,0 +1,82 @@
+.dashboard-page {
+
+    flex: 1;
+
+    min-width: 0;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+
+    padding: 30px 32px 40px;
+
+    background: #08111F;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+
+}
+
+.dashboard-page::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+/* Keep every direct dashboard section full width */
+
+.dashboard-page > * {
+
+    width: 100%;
+
+}
+
+
+/* Desktop */
+
+@media (min-width: 1200px) {
+
+    .dashboard-page {
+
+        padding: 30px 32px 45px;
+
+        gap: 30px;
+
+    }
+
+}
+
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+
+    .dashboard-page {
+
+        padding: 24px 20px 35px;
+
+        gap: 24px;
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+
+    .dashboard-page {
+
+        padding: 18px 14px 30px;
+
+        gap: 20px;
+
+    }
+
+}

@@ -1,0 +1,265 @@
+/* =====================================================
+   HISTORY CARD
+===================================================== */
+
+.history-card {
+    width: 100%;
+
+    background: #0D1726;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 22px;
+
+    padding: 22px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.20);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.history-toolbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.history-search {
+    width: 320px;
+
+    max-width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 16px;
+
+    background: #162235;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 12px;
+
+    color: #64748B;
+
+    transition: 0.25s;
+}
+
+
+.history-search:focus-within {
+    border-color: rgba(59, 130, 246, 0.45);
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+
+.history-search input {
+    width: 100%;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+}
+
+
+.history-search input::placeholder {
+    color: #64748B;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.history-card table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.history-card thead {
+    background: #162235;
+}
+
+
+.history-card th {
+    padding: 14px 16px;
+
+    color: #64748B;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+.history-card td {
+    padding: 17px 16px;
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+
+    vertical-align: middle;
+}
+
+
+.history-card tbody tr {
+    transition: 0.2s;
+}
+
+
+.history-card tbody tr:hover {
+    background: rgba(59, 130, 246, 0.045);
+}
+
+
+.history-card tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =====================================================
+   ACTION COLUMN
+===================================================== */
+
+.history-card td:first-child {
+    width: 180px;
+
+    color: #60A5FA;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.history-card td:nth-child(2) {
+    color: #E2E8F0;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TIME
+===================================================== */
+
+.history-card td:last-child {
+    color: #64748B;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.history-card tbody:empty::after {
+    content: "No history available";
+
+    display: block;
+
+    padding: 50px;
+
+    text-align: center;
+
+    color: #64748B;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991.98px) {
+
+    .history-card {
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .history-card::-webkit-scrollbar {
+        display: none;
+    }
+
+    .history-card table {
+        min-width: 650px;
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .history-card {
+        padding: 14px;
+
+        border-radius: 18px;
+    }
+
+    .history-toolbar {
+        margin-bottom: 18px;
+    }
+
+    .history-search {
+        width: 100%;
+    }
+
+    .history-card th,
+    .history-card td {
+        padding: 14px;
+    }
+
+}

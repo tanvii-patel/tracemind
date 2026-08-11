@@ -1,0 +1,631 @@
+/* ============================= */
+/* AGENT MANAGER */
+/* ============================= */
+
+.agent-manager {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* TOP BAR */
+/* ============================= */
+
+.agent-manager-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+
+/* SEARCH */
+
+.agent-search {
+    width: 320px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0 14px;
+
+    background: #0B1322;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 12px;
+
+    color: #64748B;
+    box-sizing: border-box;
+}
+
+.agent-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: white;
+
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.agent-search input::placeholder {
+    color: #64748B;
+}
+
+
+/* CREATE BUTTON */
+
+.create-agent-btn {
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #2563EB,
+        #7C3AED
+    );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.create-agent-btn:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 25px rgba(59,130,246,.25);
+}
+
+
+/* ============================= */
+/* AGENT LIST */
+/* ============================= */
+
+.agent-list {
+    width: 100%;
+
+    background: #111C2E;
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    border-radius: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* TABLE HEADER */
+/* ============================= */
+
+.agent-list-header {
+
+    display: grid;
+
+    /*
+        Agent | Model | Status | Runs | Cost | Actions
+    */
+
+    grid-template-columns:
+        minmax(280px, 2.5fr)
+        minmax(150px, 1.2fr)
+        minmax(120px, 1fr)
+        80px
+        100px
+        110px;
+
+    column-gap: 20px;
+
+    align-items: center;
+
+    min-width: 900px;
+
+    padding: 16px 18px;
+
+    background: #111C2E;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .7px;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* TABLE BODY */
+/* ============================= */
+
+.agent-list-body {
+    width: 100%;
+}
+
+
+/* ============================= */
+/* AGENT ROW */
+/* ============================= */
+
+.agent-row {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 2.5fr)
+        minmax(150px, 1.2fr)
+        minmax(120px, 1fr)
+        80px
+        100px
+        110px;
+
+    column-gap: 20px;
+
+    align-items: center;
+
+    min-width: 900px;
+
+    min-height: 92px;
+
+    padding: 18px;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+
+    box-sizing: border-box;
+
+    transition: background .2s;
+}
+
+.agent-row:hover {
+    background: rgba(255,255,255,.025);
+}
+
+
+/* ============================= */
+/* AGENT IDENTITY */
+/* ============================= */
+
+.agent-identity {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* BOT ICON */
+
+.agent-avatar {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(37,99,235,.15);
+
+    border: 1px solid rgba(37,99,235,.25);
+
+    color: #60A5FA;
+}
+
+
+/* NAME + DESCRIPTION */
+
+.agent-identity > div:last-child {
+    min-width: 0;
+}
+
+.agent-identity strong {
+
+    display: block;
+
+    max-width: 100%;
+
+    color: #F8FAFC;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.agent-identity small {
+
+    display: block;
+
+    max-width: 100%;
+
+    margin-top: 5px;
+
+    color: #64748B;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ============================= */
+/* MODEL */
+/* ============================= */
+
+.agent-model {
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+.model-badge {
+
+    display: inline-block;
+
+    max-width: 100%;
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    background: #1B283B;
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    color: #CBD5E1;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* STATUS */
+/* ============================= */
+
+.agent-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: rgba(34,197,94,.10);
+
+    border: 1px solid rgba(34,197,94,.20);
+
+    color: #4ADE80;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status-indicator {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22C55E;
+
+    box-shadow:
+        0 0 8px rgba(34,197,94,.7);
+}
+
+
+/* INACTIVE */
+
+.agent-status.inactive {
+
+    background: rgba(148,163,184,.08);
+
+    border-color: rgba(148,163,184,.15);
+
+    color: #94A3B8;
+}
+
+.agent-status.inactive .status-indicator {
+
+    background: #64748B;
+
+    box-shadow: none;
+}
+
+
+/* ============================= */
+/* RUNS */
+/* ============================= */
+
+.agent-metric {
+
+    min-width: 0;
+
+    text-align: center;
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* ============================= */
+/* COST */
+/* ============================= */
+
+.agent-cost {
+
+    min-width: 0;
+
+    text-align: right;
+
+    color: #E2E8F0;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* ============================= */
+/* ACTIONS */
+/* ============================= */
+
+.agent-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+.agent-actions button {
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+/* EDIT */
+
+.edit-agent {
+
+    background: rgba(37,99,235,.08);
+
+    border: 1px solid rgba(37,99,235,.20);
+
+    color: #60A5FA;
+}
+
+.edit-agent:hover {
+
+    background: rgba(37,99,235,.18);
+
+    border-color: #2563EB;
+
+    transform: translateY(-1px);
+}
+
+
+/* DELETE */
+
+.delete-agent {
+
+    background: rgba(239,68,68,.08);
+
+    border: 1px solid rgba(239,68,68,.20);
+
+    color: #F87171;
+}
+
+.delete-agent:hover {
+
+    background: rgba(239,68,68,.16);
+
+    border-color: #EF4444;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================= */
+/* EMPTY STATE */
+/* ============================= */
+
+.empty-agents {
+
+    min-width: 900px;
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #64748B;
+}
+
+.empty-agents svg {
+
+    margin-bottom: 14px;
+
+    color: #5B7CFF;
+}
+
+.empty-agents h3 {
+
+    margin: 0 0 7px;
+
+    color: #CBD5E1;
+
+    font-size: 17px;
+}
+
+.empty-agents p {
+
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1000px) {
+
+    .agent-manager-top {
+        align-items: stretch;
+    }
+
+    .agent-search {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .agent-list {
+        overflow-x: auto;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .agent-manager-top {
+
+        flex-direction: column;
+
+    }
+
+    .agent-search {
+
+        width: 100%;
+
+        max-width: none;
+
+    }
+
+    .create-agent-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* ============================= */
+/* SCROLLBAR */
+/* ============================= */
+
+.agent-list::-webkit-scrollbar {
+    height: 7px;
+}
+
+.agent-list::-webkit-scrollbar-track {
+    background: #0B1322;
+}
+
+.agent-list::-webkit-scrollbar-thumb {
+    background: #263244;
+    border-radius: 10px;
+}
+
+.agent-list::-webkit-scrollbar-thumb:hover {
+    background: #37465C;
+}

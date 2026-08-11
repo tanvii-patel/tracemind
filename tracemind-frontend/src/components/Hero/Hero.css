@@ -1,0 +1,301 @@
+.hero-card {
+    width: 100%;
+    min-height: 360px;
+
+    background: linear-gradient(
+        135deg,
+        #4C1D95 0%,
+        #6D28D9 55%,
+        #A21CAF 100%
+    );
+
+    border-radius: 24px;
+
+    padding: 28px 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow: 0 20px 45px rgba(91, 33, 182, 0.20);
+
+    color: white;
+
+    box-sizing: border-box;
+
+    overflow: visible;
+}
+
+.hero-card .container-fluid {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-card .row {
+    min-height: 280px;
+}
+
+
+/* ================================
+   BADGE
+================================ */
+
+.hero-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    color: #F5EFFF;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.hero-card h1 {
+    font-size: 44px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    color: white;
+
+    margin: 0 0 18px 0;
+}
+
+.hero-card h1 span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #E9D5FF;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.hero-card p {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    max-width: 620px;
+
+    margin: 0 0 28px 0;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 23px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.primary-btn {
+    background: white;
+
+    color: #6D28D9;
+
+    border: none;
+}
+
+.primary-btn:hover {
+    background: #F5F3FF;
+
+    color: #5B21B6;
+
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.20);
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   STATUS PANEL
+================================ */
+
+.status-panel {
+    width: 100%;
+
+    background: rgba(30, 10, 60, 0.30);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    backdrop-filter: blur(12px);
+}
+
+.status-panel h3 {
+    color: white;
+
+    margin: 0 0 24px 0;
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+.status-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.status-item:last-child {
+    margin-bottom: 0;
+}
+
+.status-item span {
+    flex: 1;
+}
+
+.status-item strong {
+    color: white;
+}
+
+.green-dot {
+    width: 10px;
+
+    height: 10px;
+
+    flex-shrink: 0;
+
+    background: #22C55E;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 12px #22C55E;
+}
+
+
+/* ================================
+   LARGE TABLET
+================================ */
+
+@media (max-width: 992px) {
+
+    .hero-card {
+        min-height: auto;
+
+        padding: 30px;
+    }
+
+    .hero-card .row {
+        min-height: auto;
+    }
+
+    .hero-card h1 {
+        font-size: 36px;
+    }
+
+    .status-panel {
+        margin-top: 30px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 576px) {
+
+    .hero-card {
+        padding: 24px;
+    }
+
+    .hero-card h1 {
+        font-size: 30px;
+    }
+
+    .hero-card p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .status-panel {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+.app-layout {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    background: #07111F;
+
+    overflow: hidden;
+}
+
+.main-layout {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #07111F;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   SCROLLABLE PAGES
+===================================================== */
+
+.main-layout > .history-page,
+.main-layout > .agents-page,
+.main-layout > .runs-page,
+.main-layout > .analytics-page,
+.main-layout > .monitoring-page,
+.main-layout > .dashboard-page,
+.main-layout > .playground-page {
+
+    flex: 1;
+
+    min-width: 0;
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.main-layout > .history-page::-webkit-scrollbar,
+.main-layout > .agents-page::-webkit-scrollbar,
+.main-layout > .runs-page::-webkit-scrollbar,
+.main-layout > .analytics-page::-webkit-scrollbar,
+.main-layout > .monitoring-page::-webkit-scrollbar,
+.main-layout > .dashboard-page::-webkit-scrollbar,
+.main-layout > .playground-page::-webkit-scrollbar {
+
+    display: none;
+}

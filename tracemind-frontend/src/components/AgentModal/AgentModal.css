@@ -1,0 +1,261 @@
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(2, 8, 23, 0.72);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.agent-modal {
+    width: 100%;
+
+    max-width: 500px;
+
+    max-height: calc(100vh - 40px);
+
+    overflow-y: auto;
+
+    background: linear-gradient(
+        180deg,
+        #111C2D 0%,
+        #0D1726 100%
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(59, 130, 246, 0.04);
+
+    scrollbar-width: none;
+}
+
+.agent-modal::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.agent-modal h2 {
+    margin: 0 0 24px;
+
+    color: #FFFFFF;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.agent-modal input,
+.agent-modal textarea,
+.agent-modal select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    margin-bottom: 16px;
+
+    background: #162235;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    color: #FFFFFF;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+.agent-modal input::placeholder,
+.agent-modal textarea::placeholder {
+    color: #64748B;
+}
+
+.agent-modal input:focus,
+.agent-modal textarea:focus,
+.agent-modal select:focus {
+    border-color: rgba(59, 130, 246, 0.55);
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+
+/* Select options */
+
+.agent-modal select option {
+    background: #111C2D;
+
+    color: #FFFFFF;
+}
+
+
+/* Description */
+
+.agent-modal textarea {
+    height: 100px;
+
+    resize: vertical;
+
+    min-height: 80px;
+
+    max-height: 180px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.modal-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* Cancel */
+
+.cancel-btn {
+    padding: 11px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 11px;
+
+    background: #162235;
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.cancel-btn:hover {
+    background: #1E293B;
+
+    color: #FFFFFF;
+}
+
+
+/* Save */
+
+.save-btn {
+    padding: 11px 22px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #2563EB,
+        #3B82F6
+    );
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.save-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #1D4ED8,
+        #2563EB
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575.98px) {
+
+    .modal-overlay {
+        padding: 14px;
+    }
+
+    .agent-modal {
+        padding: 22px;
+
+        border-radius: 18px;
+    }
+
+    .agent-modal h2 {
+        font-size: 21px;
+
+        margin-bottom: 20px;
+    }
+
+    .modal-buttons {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}

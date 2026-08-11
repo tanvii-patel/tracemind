@@ -1,0 +1,433 @@
+/* =====================================================
+   STATS GRID
+===================================================== */
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+
+    margin-top: 30px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   STAT CARD
+===================================================== */
+
+.stat-card {
+
+    background: linear-gradient(
+        180deg,
+        #111827,
+        #0F172A
+    );
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    width: 100%;
+
+    min-height: 185px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.stat-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =====================================================
+   TOP BORDER COLORS
+===================================================== */
+
+.stat-card.blue {
+
+    border-top: 4px solid #3B82F6;
+}
+
+.stat-card.green {
+
+    border-top: 4px solid #22C55E;
+}
+
+.stat-card.purple {
+
+    border-top: 4px solid #8B5CF6;
+}
+
+.stat-card.orange {
+
+    border-top: 4px solid #F97316;
+}
+
+
+/* =====================================================
+   TOP CONTENT
+===================================================== */
+
+.stat-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   TEXT AREA
+===================================================== */
+
+.stat-content {
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.stat-top span {
+
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #94A3B8;
+
+    line-height: 1.35;
+
+    white-space: normal;
+}
+
+
+/* =====================================================
+   VALUE
+===================================================== */
+
+.stat-top h2 {
+
+    margin: 14px 0 0;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: white;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.stat-card .icon {
+
+    width: 56px;
+
+    height: 56px;
+
+    min-width: 56px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 16px;
+
+    color: white;
+}
+
+
+/* =====================================================
+   BLUE ICON
+===================================================== */
+
+.stat-card.blue .icon {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #3B82F6
+        );
+}
+
+
+/* =====================================================
+   GREEN ICON
+===================================================== */
+
+.stat-card.green .icon {
+
+    background:
+        linear-gradient(
+            135deg,
+            #16A34A,
+            #22C55E
+        );
+}
+
+
+/* =====================================================
+   PURPLE ICON
+===================================================== */
+
+.stat-card.purple .icon {
+
+    background:
+        linear-gradient(
+            135deg,
+            #7C3AED,
+            #9333EA
+        );
+}
+
+
+/* =====================================================
+   ORANGE ICON
+===================================================== */
+
+.stat-card.orange .icon {
+
+    background:
+        linear-gradient(
+            135deg,
+            #EA580C,
+            #F97316
+        );
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.stat-card p {
+
+    margin: 22px 0 0;
+
+    color: #94A3B8;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .stat-card {
+
+        padding: 20px;
+
+        min-height: 175px;
+    }
+
+    .stat-top {
+
+        gap: 12px;
+    }
+
+    .stat-top span {
+
+        font-size: 15px;
+    }
+
+    .stat-top h2 {
+
+        font-size: 30px;
+
+        margin-top: 13px;
+    }
+
+    .stat-card .icon {
+
+        width: 52px;
+
+        height: 52px;
+
+        min-width: 52px;
+
+        border-radius: 15px;
+    }
+
+    .stat-card p {
+
+        margin-top: 18px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .stat-card {
+
+        min-height: 155px;
+
+        padding: 20px;
+
+        border-radius: 18px;
+    }
+
+    .stat-top span {
+
+        font-size: 16px;
+
+        max-width: 180px;
+    }
+
+    .stat-top h2 {
+
+        font-size: 30px;
+    }
+
+    .stat-card .icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        min-width: 50px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .stat-card {
+
+        padding: 17px;
+    }
+
+    .stat-top span {
+
+        font-size: 14px;
+    }
+
+    .stat-top h2 {
+
+        font-size: 27px;
+    }
+
+    .stat-card .icon {
+
+        width: 46px;
+
+        height: 46px;
+
+        min-width: 46px;
+    }
+
+}
+/* TEST OVERRIDE */
+/* =====================================================
+   FINAL STAT TEXT
+===================================================== */
+
+.stat-card .stat-top span {
+    display: block;
+
+    font-size: 20px !important;
+
+    font-weight: 600;
+
+    color:white !important;
+
+    line-height: 1.35;
+
+    white-space: normal;
+}
+
+
+.stat-card .stat-top h2 {
+    margin: 14px 0 0;
+
+    font-size: 29px !important;
+
+    font-weight: 700;
+
+    color: #FFFFFF !important;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+}

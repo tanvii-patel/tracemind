@@ -1,0 +1,559 @@
+/* =====================================================
+   PLAYGROUND PAGE
+===================================================== */
+
+.playground-page {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+
+    padding: 30px 32px 50px;
+
+    background: #08111F;
+    color: white;
+
+    box-sizing: border-box;
+
+    overflow: visible;
+}
+
+.playground-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(360px, 0.8fr)
+        minmax(450px, 1.2fr);
+
+    gap: 24px;
+
+    width: 100%;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.playground-header {
+    margin-bottom: 30px;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-row svg {
+    color: #7C3AED;
+}
+
+.playground-header h1 {
+    margin: 0;
+
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.playground-header p {
+    margin: 8px 0 0;
+
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MAIN GRID
+===================================================== */
+
+.playground-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(360px, 0.8fr)
+        minmax(450px, 1.2fr);
+
+    gap: 24px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.playground-card {
+    background: #111827;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    border-radius: 20px;
+
+    padding: 26px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CARD HEADING
+===================================================== */
+
+.card-heading {
+    margin-bottom: 24px;
+}
+
+.card-heading h2 {
+    margin: 0;
+
+    font-size: 20px;
+}
+
+.card-heading span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #64748B;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.playground-card label {
+    display: block;
+
+    margin: 18px 0 8px;
+
+    color: #CBD5E1;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.playground-card select,
+.playground-card input,
+.playground-card textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #263244;
+
+    border-radius: 12px;
+
+    background: #0B1322;
+
+    color: white;
+
+    padding: 12px 14px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+}
+
+.playground-card select:focus,
+.playground-card input:focus,
+.playground-card textarea:focus {
+    border-color: #5B7CFF;
+
+    box-shadow:
+        0 0 0 3px rgba(91, 124, 255, 0.12);
+}
+
+.playground-card textarea {
+    resize: vertical;
+
+    min-height: 180px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.execute-btn {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 13px 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563EB,
+            #7C3AED
+        );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 9px;
+
+    transition: 0.25s;
+}
+
+.execute-btn:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 25px rgba(59, 130, 246, 0.25);
+}
+
+.execute-btn:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.playground-error {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 16px;
+
+    padding: 11px 13px;
+
+    border-radius: 10px;
+
+    background: rgba(239, 68, 68, 0.1);
+
+    border: 1px solid rgba(239, 68, 68, 0.25);
+
+    color: #FCA5A5;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSE CARD
+===================================================== */
+
+.response-card {
+    min-height: 600px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   EMPTY RESPONSE
+===================================================== */
+
+.empty-response {
+    flex: 1;
+
+    min-height: 450px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #64748B;
+}
+
+.empty-response svg {
+    color: #5B7CFF;
+
+    margin-bottom: 16px;
+}
+
+.empty-response h3 {
+    margin: 0 0 8px;
+
+    color: #CBD5E1;
+}
+
+.empty-response p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSE CONTENT
+===================================================== */
+
+.response-content {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 0;
+}
+
+
+/* =====================================================
+   SUCCESS BADGE
+===================================================== */
+
+.success-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    width: fit-content;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: rgba(34, 197, 94, 0.1);
+
+    color: #4ADE80;
+
+    font-size: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   RESPONSE TEXT
+===================================================== */
+
+.response-text {
+    flex: 1;
+
+    background: #0B1322;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    color: #CBD5E1;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    white-space: pre-wrap;
+
+    overflow-y: auto;
+
+    max-height: 470px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   RUN INFO
+===================================================== */
+
+.run-info {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+    flex-wrap: wrap;
+}
+
+.run-info div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 12px;
+
+    border-radius: 10px;
+
+    background: #0B1322;
+
+    color: #94A3B8;
+
+    font-size: 12px;
+}
+
+.run-info svg {
+    color: #5B7CFF;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loading-orb {
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #7C3AED
+        );
+
+    color: white !important;
+
+    animation: pulseAI 1.4s infinite;
+}
+
+.spinner {
+    width: 15px;
+
+    height: 15px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    animation: spinAI 0.7s linear infinite;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes spinAI {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseAI {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.7;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .playground-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .response-card {
+        min-height: 500px;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    .playground-page {
+        padding: 20px 14px 35px;
+    }
+
+    .playground-header h1 {
+        font-size: 28px;
+    }
+
+    .playground-card {
+        padding: 20px;
+    }
+
+    .playground-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.selected-agent-info {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: #0B1322;
+    border: 1px solid #263244;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.selected-agent-info strong {
+    color: #E2E8F0;
+    font-size: 13px;
+}
+
+.selected-agent-info span {
+    color: #94A3B8;
+    font-size: 12px;
+}
+
+.selected-agent-info small {
+    color: #64748B;
+    font-size: 11px;
+}

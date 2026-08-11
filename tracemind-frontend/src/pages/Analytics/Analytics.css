@@ -1,0 +1,327 @@
+/* =====================================================
+   ANALYTICS PAGE
+===================================================== */
+
+.analytics-page {
+    width: 100%;
+    min-width: 0;
+
+    padding: 30px 32px 50px;
+
+    background: #08111F;
+    color: white;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.analytics-page h1 {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+.analytics-page > p {
+    margin: 8px 0 28px;
+
+    color: #94A3B8;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.analytics-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+
+    margin-bottom: 30px;
+}
+
+.analytics-card {
+    position: relative;
+
+    background: linear-gradient(
+        145deg,
+        #111827,
+        #0F172A
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    color: white;
+
+    min-width: 0;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.analytics-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(91, 124, 255, 0.25);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Icons */
+
+.analytics-card svg {
+    width: 26px;
+    height: 26px;
+
+    color: #5B7CFF;
+
+    margin-bottom: 18px;
+}
+
+
+/* Labels */
+
+.analytics-card h3 {
+    margin: 0;
+
+    color: #94A3B8;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Values */
+
+.analytics-card h2 {
+    margin: 10px 0 0;
+
+    color: #FFFFFF;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   CHART GRID
+===================================================== */
+
+.chart-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   CHART CARD
+===================================================== */
+
+.chart-card {
+    min-width: 0;
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        145deg,
+        #111827,
+        #0F172A
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    color: white;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.chart-card:hover {
+    border-color: rgba(91, 124, 255, 0.20);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Chart heading */
+
+.chart-card h3 {
+    margin: 0 0 20px;
+
+    color: #FFFFFF;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   RECHARTS
+===================================================== */
+
+.chart-card .recharts-responsive-container {
+    flex: 1;
+    min-height: 300px;
+}
+
+
+/* Tooltip */
+
+.recharts-tooltip-wrapper {
+    outline: none;
+}
+
+.recharts-default-tooltip {
+    background: #111827 !important;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08) !important;
+
+    border-radius: 12px !important;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .analytics-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .analytics-page {
+        padding: 24px 20px 40px;
+    }
+
+    .analytics-page h1 {
+        font-size: 30px;
+    }
+
+    .analytics-stats {
+        gap: 18px;
+    }
+
+    .analytics-card {
+        padding: 22px;
+    }
+
+    .analytics-card h2 {
+        font-size: 29px;
+    }
+
+    .chart-card {
+        min-height: 400px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575.98px) {
+
+    .analytics-page {
+        padding: 18px 14px 30px;
+    }
+
+    .analytics-page h1 {
+        font-size: 26px;
+    }
+
+    .analytics-page > p {
+        font-size: 13px;
+
+        margin-bottom: 22px;
+    }
+
+    .analytics-stats {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        margin-bottom: 22px;
+    }
+
+    .analytics-card {
+        padding: 20px;
+    }
+
+    .analytics-card h2 {
+        font-size: 28px;
+    }
+
+    .chart-grid {
+        gap: 18px;
+    }
+
+    .chart-card {
+        min-height: 370px;
+
+        padding: 18px;
+    }
+
+    .chart-card h3 {
+        font-size: 16px;
+    }
+}
