@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:8080/api/dashboard";
+const API = "http://trace-mind.onrender.com/api/dashboard";
 
 
 export const getDashboardStats = async () => {

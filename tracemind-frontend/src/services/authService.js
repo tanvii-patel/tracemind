@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:8080/api/auth";
+const API = "http://trace-mind.onrender.com/api/auth";
 
 export const login = (data) =>
     axios.post(`${API}/login`, data);

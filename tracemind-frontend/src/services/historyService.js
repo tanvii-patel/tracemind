@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:8080/api/history";
+const API = "http://trace-mind.onrender.com/api/history";
 
 export const getHistory = () =>
     axios.get(API);

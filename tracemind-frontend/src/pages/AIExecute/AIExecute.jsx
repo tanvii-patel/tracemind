@@ -14,7 +14,7 @@ import axios from "axios";
 
 import "./AIExecute.css";
 
-const API = "http://localhost:8080/api";
+const API = "http://trace-mind.onrender.com/api";
 
 function AIExecute() {
 
