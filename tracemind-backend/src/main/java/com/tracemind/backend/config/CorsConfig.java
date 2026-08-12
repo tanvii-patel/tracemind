@@ -17,7 +17,11 @@ public class CorsConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOrigins(List.of("http://localhost:5173"));
+        configuration.setAllowedOrigins(List.of(
+                "http://localhost:5173",
+                "https://tanvii-patel-tracemind.vercel.app",
+                "https://tanvii-patel-tracemind-mzsbsh83s-personal-103e.vercel.app"
+        ));
 
         configuration.setAllowedMethods(List.of(
                 "GET",
