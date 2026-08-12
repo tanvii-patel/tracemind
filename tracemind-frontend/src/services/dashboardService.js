@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://trace-mind.onrender.com/api/dashboard";
+const API = "https://trace-mind.onrender.com/api/dashboard";
 
 
 export const getDashboardStats = async () => {

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://trace-mind.onrender.com/api"
+    baseURL: "https://trace-mind.onrender.com/api"
 });
 
 api.interceptors.request.use((config) => {

@@ -482,7 +482,7 @@ mvnw spring-boot:run
 Backend:
 
 
-http://trace-mind.onrender.com
+https://trace-mind.onrender.com
 
 
 

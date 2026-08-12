@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://trace-mind.onrender.com/api/runs";
+const API = "https://trace-mind.onrender.com/api/runs";
 
 export const getRuns = () =>
     axios.get(API);

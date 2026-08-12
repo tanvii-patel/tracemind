@@ -44,7 +44,7 @@ function AIPlayground() {
             const token = localStorage.getItem("token");
 
             const res = await axios.get(
-                "http://trace-mind.onrender.com/api/agents",
+                "https://trace-mind.onrender.com/api/agents",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -103,7 +103,7 @@ function AIPlayground() {
             const token = localStorage.getItem("token");
 
             const res = await axios.post(
-                "http://trace-mind.onrender.com/api/ai/execute",
+                "https://trace-mind.onrender.com/api/ai/execute",
                 {
                     provider: "GEMINI",
                     model: "gemini-3.5-flash",

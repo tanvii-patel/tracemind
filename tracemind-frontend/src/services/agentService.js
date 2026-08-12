@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://trace-mind.onrender.com/api/agents";
+const API_URL = "https://trace-mind.onrender.com/api/agents";
 
 function authConfig() {
     const token = localStorage.getItem("token");
